@@ -1,0 +1,48 @@
+# 作业4
+# 使用列表推导式写下面这个算法题
+# 给定一个按非递减顺序排序的整数数组A，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。
+#
+# 示例
+# 1：
+# 输入：[-4, -1, 0, 3, 10]
+# 输出：[0, 1, 9, 16, 100]
+#
+# 示例
+# 2：
+# 输入：[-7, -3, 2, 3, 11]
+# 输出：[4, 9, 9, 49, 121]
+#
+# 提示：
+# 1 <= A.length <= 10000
+# -10000 <= A[i] <= 10000
+# A
+# 已按非递减顺序排序。
+
+
+# 创建一个能够实现元素为原来列表中每个元素的平方组成的新列表的函数
+def new_list(list):
+    new_list = [] # 创建一个空白的新列表
+    for i in list: # 创建for循环，构成新列表
+        i = i**2
+        new_list.append(i)
+    return new_list # 返回新列表
+
+# 创建一个实现冒泡排序函数
+def bubble_sort(list):
+    for i in range(1,len(list)): # 排序测试
+        print("这是第{}次排序".format(i))
+        for j in range(len(list) - i): # 对比次数
+            print("这是第{}次对比".format(j)) # 提示这是第几次排序
+            if list[j]<list[j+1]: # if语句实现排序
+                list[j],list[j+1] = list[j+1],list[j]
+    return list
+
+print("下列是一次代码测试：")
+list_original_1= [-4, -1, 0, 3, 10]
+print("\n这是原来的列表："+str(list_original_1))# 构建一个乱序列表
+
+list_new_1 = new_list(list_original_1)
+print("\n这是原列表元素平方后的新列表："+str(list_new_1))
+
+print("\n开始进行排序：")
+print("\n这是重新排序后的新列表："+str(bubble_sort(list_new_1)))
