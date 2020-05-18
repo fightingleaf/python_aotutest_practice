@@ -1,18 +1,3 @@
-# 作业1
-# 冒泡排序每一行加注释说明
-#
-#
-def bubble_sort(list):  # 创建实现冒泡排序的函数
-    for i in range(len(list) - 1):  # 设定循环次数
-        for j in range(len(list) - 1 - i):  # 设定对比次数
-            if list[j] > list[j + 1]:  # 比较列表中相邻两个数的大小
-                list[j], list[j + 1] = list[j + 1], list[j]  # 如果左边大于右边，就交换两个数的位置
-    return list  # 返回冒泡后的list
-
-
-list = [3, 2, 1, 4, 5, 6, 0, 9]  # 创建一个未排序的列表
-print(bubblesort(list))  # 引用bubble_sort函数，对list列表进行排序
-
 # 作业2
 # 用类和面向对象的思想，“描述”生活中任意接触到的东西（比如动物、小说里面的人物，不做限制，随意发挥），数量为5个
 #
