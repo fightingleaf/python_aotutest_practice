@@ -1,1 +1,83 @@
 
+class Car:  # 定义一个车的类
+    def __init__(self, brand, color, dynamics, odometer):  # 初始化车类的实例
+        self.brand = brand  # 初始化‘品牌’
+        self.color = color  # 初始化‘颜色’
+        self.dynamics = dynamics  # 初始化‘动力类型’
+        self.odometer = odometer  # 初始化‘里程表’
+
+    def get_descriptive(self):
+        print("展示车类信息：")  # 提示“展示车辆信息”
+        descriptive = "汽车品牌：" + str(self.brand) + "\n车身颜色：" + str(self.color) + "\n动力类型：" + \
+                      str(self.dynamics) + "\n里程表：" + str(self.odometer)  # 讲车类信息聚合赋值给变量“descriptive”
+        print(descriptive)  # 打印出“descriptive”来介绍车类信息
+
+    def set_odometer(self, odometer):  # 创建一个可以设置汽车里程表的里程记录的方法
+        self.odometer = odometer  # 通过参数odometer修改车辆“里程表”信息
+        print("里程表已经设置为：" + (self.odometer))  # 提示已经更新了“里程表”信息
+
+
+byd = Car('比亚迪', '白色', '纯电', '0km')  # 实例化“byd”
+byd.get_descriptive()  # 调用Car类的get_descriptive()方法来展示车辆信息
+print("\n")
+byd.set_odometer('50km')  # 调用Car类的set_odometer()方法来更新“里程表”信息
+print("\n")
+byd.get_descriptive()  # 调用Car类的get_descriptive()方法来展示车辆信息
+
+
+class Cup:  # 定义一个杯子的类
+    def __init__(self, color, cubage):  # 初始化对象
+        self.color = color  # 初始化杯子颜色属性
+        self.cubage = cubage  # 初始化杯子容积属性
+
+    def use_drink(self):  # 创建use_drink方法，打印出自己的用途
+        print("杯子可以用来喝水")
+
+
+cup_1 = Cup('白色', '500ml')  # 实例化杯子cup_1
+print(cup_1.color)  # 打印杯子cup_1颜色属性
+print(cup_1.cubage)  # 打印杯子cup_1容积属性
+cup_1.use_drink()  # 调用use_drink方法
+
+
+class Shoes:  # 定义一个鞋子的类型
+    def __init__(self, color, use):
+        self.color = color
+        self.use = use
+
+    def useful(self):
+        print("不同的鞋子有不同的用途")
+
+
+shoes_1 = Shoes('黑色', '羽毛球')  # 实例化shoes_1
+print(shoes_1.color)
+print(shoes_1.use)
+shoes_1.useful()  # 调用useful方法
+
+class Cat: # 创建一个猫类
+    def __init__(self,color,sex): # 初始化猫的属性
+        self.color = color # 初始化猫的颜色属性
+        self.sex = sex # 初始化猫的性别属性
+
+    def catch_the_mouse(self): # 定义catch_the_mouse方法
+        print("派出猫猫去抓老鼠")
+
+
+cat_1 = Cat('白色', '雄性') # 实例化cat_1
+print(cat_1.color) # 打印猫的颜色属性
+print(cat_1.sex) # 打印猫的性别属性
+cat_1.catch_the_mouse() # 调用catch_the_mouse方法
+
+class PostalCode:
+    def __init__(self, city, code):
+        self.city = city
+        self.code = code
+
+    def ues(self):
+        print("必须要有邮政编码才能判断信件要送达的城市")
+
+
+guangzhou = PostalCode("广州", '510000') # 实例化guangzhou
+print(guangzhou.city) # 打印guangzhou的城市属性
+print(guangzhou.code) # 打印guangzhou的邮政编码属性
+guangzhou.ues() # 调用ues方法
